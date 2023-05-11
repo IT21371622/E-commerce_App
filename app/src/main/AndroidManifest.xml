@@ -13,6 +13,9 @@
         android:theme="@style/Theme.B01_G01_Mobile_Masters"
         tools:targetApi="31">
         <activity
+            android:name=".activity.CategoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
