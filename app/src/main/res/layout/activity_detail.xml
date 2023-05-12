@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/im"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:src="@drawable/back1" />
+
+
+        <ImageView
+            android:id="@+id/homeBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="350dp"
+            android:background="@null"
+            android:src="@drawable/home" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailTitle"
+        android:text="Title"
+        android:textSize="24dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/lavender"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/detailImage"
+        android:src="@drawable/add"
+        android:scaleType="fitXY"
+        android:padding="5dp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:padding="20dp"
+        android:id="@+id/detailType"
+        android:textColor="@color/lavender"
+        android:layout_gravity="center"/>
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Id"-->
+<!--        android:textSize="18sp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:padding="20dp"-->
+<!--        android:id="@+id/detailId"-->
+<!--        android:textColor="@color/lavender"-->
+<!--        android:layout_gravity="center"/>-->
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:padding="20dp"
+        android:id="@+id/detailDescription"
+        android:textColor="@color/lavender"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:padding="20dp"
+        android:id="@+id/detailPrice"
+        android:textColor="@color/lavender"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:padding="20dp"
+        android:id="@+id/detailContact"
+        android:textColor="@color/lavender"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:padding="20dp"
+        android:id="@+id/detailAddress"
+        android:textColor="@color/lavender"
+        android:layout_gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:text="Delete"
+            android:id="@+id/mainDelete"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/lavender"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/lavender"
+            android:textStyle="bold"
+            app:cornerRadius = "20dp"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:text="Update"
+            android:id="@+id/mainUpdate"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/lavender"
+            app:strokeWidth="2dp"
+            android:textStyle="bold"
+            app:strokeColor="@color/lavender"
+            app:cornerRadius = "20dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
