@@ -1,12 +1,14 @@
 package com.example.b01_g01_mobile_masters.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.b01_g01_mobile_masters.R
+import com.example.b01_g01_mobile_masters.activity.CategoryActivity
 import com.example.b01_g01_mobile_masters.databinding.LayoutCategoryItemBinding
 import com.example.b01_g01_mobile_masters.model.CategoryModel
 
@@ -28,5 +30,11 @@ class CategoryAdapter(var context: Context, private val list : ArrayList<Categor
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         holder.binding.textView.text = list[position].cat
         Glide.with(context).load(list[position].img).into(holder.binding.imageView)
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(context, CategoryActivity::class.java)
+            intent.putExtra("cat",list[position].cat)
+            context.startActivity(intent)
+        }
     }
 }

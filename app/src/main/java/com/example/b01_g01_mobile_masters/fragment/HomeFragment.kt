@@ -1,13 +1,16 @@
 package com.example.b01_g01_mobile_masters.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.app.NotificationCompat.getCategory
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.b01_g01_mobile_masters.R
+import com.example.b01_g01_mobile_masters.activity.ProductDetailActivity
 import com.example.b01_g01_mobile_masters.adapter.CategoryAdapter
 import com.example.b01_g01_mobile_masters.adapter.ProductAdapter
 import com.example.b01_g01_mobile_masters.databinding.FragmentHomeBinding
@@ -16,9 +19,14 @@ import com.example.b01_g01_mobile_masters.model.CategoryModel
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
+
+
+
+
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +34,18 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(layoutInflater)
+
+        binding.button2.setOnClickListener{
+            val intent = Intent(requireContext(), ProductDetailActivity::class.java)
+            startActivity(intent)
+        }
+
+        val preference = requireContext().getSharedPreferences("info", AppCompatActivity.MODE_PRIVATE)
+
+        if(preference.getBoolean("isCart",false)){
+            findNavController().navigate(R.id.action_homeFragment_to_cartFragment)
+        }
+
 
         getSliderImage()
         getCategory()
